@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Phone Number Validation</title>
+<script language="JavaScript">
+<!-- 
+function validatePhone(areaCode,prefix,extension)
+{
+  var phoneNum = new String(areaCode + "-" + prefix + "-" + extension);
+    
+  var regExpObj = /^(\+91)-\d\d\d\d\d-\d\d\d\d\d/;
+    
+  if(regExpObj.exec(phoneNum) == null)
+  {
+    alert(" Your mobile number wants to be in the +91-12345-67890 !");
+  }
+  }
+// end script-->
+</script>
+</head>
+    
+<body>
+<center>
+<h1>Phone Number Validation</h1>
+<form name="form1">
+Phone Number: 
+<input type="text" size=3 maxlength=3 name="area">-
+<input type="text" size=5 maxlength=5 name="prefix">-
+<input type="text" size=5 maxlength=5 name="extension">
+<br><br>
+<input type="button" value="Submit" onClick="validatePhone(area.value, prefix.value, extension.value)">
+</form>
+</center>
+</body>
+</html>

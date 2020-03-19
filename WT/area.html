@@ -1,0 +1,36 @@
+Write a JavaScript program to find the area of circle, rectangle and triangle.
+<html> 
+<head> 
+<script language="javascript"> 
+function calculatetriangle() 
+{ 
+ var base=parseInt(prompt("Type the width of triangle:")); 
+ var height=parseInt(prompt("Type the height of triangle:")); 
+document.write("<p>The area of triangle: "+(base*height*0.5)+"</p>"); 
+} 
+function calculatecircle() 
+{ 
+ var radious=parseInt(prompt("Type the radious of circle:")); 
+document.write("<p>The area of circle: "+(3.14*radious*radious)+"</p>"); 
+} 
+function calculaterectangle() 
+{ 
+ var length=parseInt(prompt("Type the length of rectangle:")); 
+ var width=parseInt(prompt("Type the width of rectangle:")); 
+document.write("<p>The area of rectangle: "+(length*width)+"</p>"); 
+} 
+ 
+</script> 
+<body> 
+<form name=form1> 
+Enter the width and height of triangle: 
+<input type="button" value="calculate" onClick='calculatetriangle();'><br/> 
+Enter the radious of circle: 
+<input type="button" value="calculate" onClick='calculatecircle();'></br> 
+Enter the length and width of rectangle: 
+<input type="button" value="calculate" onClick='calculaterectangle();'> 
+</form> 
+
+</body> 
+</html>
+

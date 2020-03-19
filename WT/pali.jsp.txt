@@ -1,0 +1,24 @@
+<html>
+<title> palindrome string</title>
+<body>
+<script type="text/javascript">
+function checkpalindrome(){
+var revstr = " ";
+var str = document.getElementById("str").value;
+var i = str.length;
+for (var j=i; j>=0; j--){
+revstr = revstr+str.charAt(j);
+}
+if(str == revstr){
+alert(str+" -is palindrome");
+}else{
+alert(str+" -is not a palindrome");
+}
+}
+</script>
+<form>
+Enter a string/number: <input type="text id="str" name="string" /><br/>
+<input type="submit" value="check onclick= "checkPalindrome();" />
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Mobile No. Validation</title>
+<script type="text/javascript">
+function validateMobNo(mobno){
+    var mobno2;
+    var flag=false;
+    var mlen= mobno.length;
+    //alert(mobno.substr(3,mobno.length-3));
+    if(mobno.charAt(0)!='+' && mlen==10){
+        mobno2="+91-"+mobno;
+        alert("1>>your mobile wants to be in "+mobno2);
+        flag=true;
+    }
+    else if(mobno.charAt(0)=='+'){
+        if(mobno.substr(0,3)=='+91' && mobno.length==13){
+            mobno2=mobno.substr(0,3)+"-"+mobno.substr(3,mobno.length-3);
+            alert("2>>your mobile wants to be in "+mobno2);
+            flag=true;      
+        }
+    }
+    else if(mobno.indexOf("-")<0&&mobno.length==12 && mobno.substr(0,2)=='91'){
+        mobno2=mobno.substr(0,2)+"-"+mobno.substr(3,mobno.length-2);
+        alert("3>>your mobile wants to be in "+mobno2);
+        flag=true;
+        }
+    else
+        alert("Please correct your mobile No");
+    if(flag==true)
+       document.mobvalidate.mobno.value=mobno2;
+    else
+        document.mobvalidate.mobno.focus()
+    return flag;
+         
+}
+</script>
+</head>
+<body>
+ 
+<form name="mobvalidate">
+<input type="text" id="mobno" />
+<input type="button" value="VALIDATE" onclick="validateMobNo(mobno.value)" />
+</form>
+</body>
+</html>
